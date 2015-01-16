@@ -1,0 +1,29 @@
+<div class="container" ng-controller="shoppingDetailsCtrl">
+    <div class="row">
+        <div class="col-xs-9">
+            <h4>Item Details</h4>
+            <br/>
+            <div class="input-group">
+                <span class="input-group-addon">Name</span>
+                <input type="text" class="form-control" ng-model="item.name" ng-disabled="true">
+            </div>
+            <br/>
+            <div class="input-group">
+                <span class="input-group-addon">Description</span>
+                <input type="text" class="form-control" ng-model="item.description" ng-disabled="true">
+            </div>
+            <br/>
+            <div class="input-group">
+                <span class="input-group-addon">Price</span>
+                <input type="text" class="form-control" ng-model="item.price" ng-disabled="true">
+            </div>
+            <br/>
+            <div class="pull-right">
+                <button type="button" class="btn btn-s btn-primary" ng-click="addItemToBasket()">Add to basket</button>
+            </div>
+        </div>
+        <div class='col-xs-3'>
+            <basket ng-if="basketRefreshHandle"></basket>
+        </div>
+    </div> 
+</div>

@@ -1,0 +1,22 @@
+<div class="container" ng-controller="shoppingListCtrl">
+    <div class="row">
+        <div class="col-xs-9">
+            <div class="col-sm-4" ng-repeat="item in shopItems">
+                <div class="thumbnail" ui-sref="shoppingDetails({ id: item.id })">
+                    <div class="caption">
+                        <h3>{{item.name}}</h3>
+                        <p>{{item.description}}</p>
+                        <p>{{item.price}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="pull-right">
+                <pagination ng-if="shopItems" pagination-data="paginationData" pagination-function="paginationFunction(startIndex, batchSize)"></pagination>
+            </div>
+        </div>
+        <div class='col-xs-3'>
+            <basket></basket>
+        </div>
+    </div>
+</div>
