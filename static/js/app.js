@@ -232,7 +232,7 @@ angular.module("app")
             })
         };
 
-        $scope.paginationFunction(0, 4);
+        $scope.paginationFunction(0, 3);
     });
 angular.module("directives", []);
 
